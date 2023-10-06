@@ -9,12 +9,14 @@ import orderRoute from './routes/orderRoute.js'
 import saleprodRoute from './routes/saleprodRoute.js'
 import cors from 'cors'
 import path from 'path'
-
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 
 connectDB();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 //rest object
 const app = express()
